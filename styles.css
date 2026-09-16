@@ -247,17 +247,19 @@ a {
   right: 20px;
   bottom: 20px;
   z-index: 60;
-  width: 54px;
-  height: 54px;
-  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px;
+  border-radius: 999px;
   border: 1px solid var(--gold);
   background: rgba(20, 33, 26, 0.92);
   color: var(--gold);
   cursor: pointer;
-  display: grid;
-  place-items: center;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
   transition: transform 0.15s ease;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 .music-toggle:hover {
@@ -265,8 +267,9 @@ a {
 }
 
 .music-toggle svg {
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
+  flex: 0 0 auto;
 }
 
 .music-toggle .ico-stop {
@@ -279,6 +282,10 @@ a {
 
 .music-toggle.playing .ico-stop {
   display: block;
+}
+
+.music-toggle .music-label {
+  color: var(--cream);
 }
 
 .music-toggle.playing {

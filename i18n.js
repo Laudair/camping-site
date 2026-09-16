@@ -2,6 +2,8 @@ const translations = {
   pt: {
     "brand": "Acampamento Farroupilha",
     "header.tag": "Campeonato de Truco",
+    "music.play": "Clique pra ouvir explicação",
+    "music.pause": "Pausar",
     "nav.foundations": "Fundamentos",
     "nav.howitplays": "Como se joga",
     "nav.envido": "Envido",
@@ -120,6 +122,8 @@ const translations = {
   es: {
     "brand": "Acampamento Farroupilha",
     "header.tag": "Campeonato de Truco",
+    "music.play": "Clic para escuchar la explicación",
+    "music.pause": "Pausar",
     "nav.foundations": "Fundamentos",
     "nav.howitplays": "Cómo se juega",
     "nav.envido": "Envido",
@@ -238,6 +242,8 @@ const translations = {
   en: {
     "brand": "Acampamento Farroupilha",
     "header.tag": "Truco Championship",
+    "music.play": "Click to hear the explanation",
+    "music.pause": "Pause",
     "nav.foundations": "Foundations",
     "nav.howitplays": "How it plays",
     "nav.envido": "Envido",
@@ -381,6 +387,16 @@ function currentLang() {
   return "pt";
 }
 
+let musicPlaying = false;
+
+function updateMusicLabel(lang) {
+  const label = document.getElementById("music-label");
+  if (!label) return;
+  const l = lang || currentLang();
+  const key = musicPlaying ? "music.pause" : "music.play";
+  label.textContent = translations[l][key];
+}
+
 function cardImage(name) {
   const img = document.createElement("img");
   img.src = `${CARD_PATH}${name}.png`;
@@ -436,6 +452,8 @@ function applyLanguage(lang) {
 
   renderRankGrid(lang);
 
+  updateMusicLabel(lang);
+
   localStorage.setItem("lang", lang);
 }
 
@@ -468,20 +486,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const audio = document.getElementById("site-music");
   const musicToggle = document.getElementById("music-toggle");
-  const MUSIC_KEY = "music-stopped";
 
   function setPlaying(state) {
+    musicPlaying = state;
     musicToggle.classList.toggle("playing", state);
     musicToggle.setAttribute("aria-pressed", state ? "true" : "false");
+    updateMusicLabel();
   }
 
   if (audio && musicToggle) {
     audio.volume = 0.6;
 
-    audio.addEventListener("play", () => {
-      setPlaying(true);
-      localStorage.removeItem(MUSIC_KEY);
-    });
+    audio.addEventListener("play", () => setPlaying(true));
     audio.addEventListener("pause", () => setPlaying(false));
 
     musicToggle.addEventListener("click", () => {
@@ -489,21 +505,10 @@ document.addEventListener("DOMContentLoaded", () => {
         audio.play().catch(() => {});
       } else {
         audio.pause();
-        localStorage.setItem(MUSIC_KEY, "1");
       }
     });
 
-    if (localStorage.getItem(MUSIC_KEY) !== "1") {
-      audio.play().catch(() => {
-        const start = () => {
-          if (audio.paused && localStorage.getItem(MUSIC_KEY) !== "1") {
-            audio.play().catch(() => {});
-          }
-        };
-        document.addEventListener("click", start, { once: true });
-        document.addEventListener("touchstart", start, { once: true });
-      });
-    }
+    updateMusicLabel();
   }
 
   applyLanguage(currentLang());

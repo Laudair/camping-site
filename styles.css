@@ -649,7 +649,7 @@ a {
   margin-top: 34px;
   border: 1px solid var(--line);
   border-radius: 16px;
-  overflow: hidden;
+  overflow-x: auto;
 }
 
 table {
@@ -843,14 +843,11 @@ tbody td:last-child {
 
   table {
     font-size: 14px;
+    min-width: 560px;
   }
 
   thead th,
   tbody td {
     padding: 14px 14px;
-  }
-
-  tbody td:last-child {
-    display: none;
   }
 }

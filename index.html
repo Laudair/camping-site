@@ -208,7 +208,39 @@
             <h3 data-i18n="flor.title">A Flor sagrada</h3>
             <p data-i18n="flor.body">Se você receber as três cartas do mesmo naipe, anuncie imediatamente "Flor!" antes de a rodada começar. A Flor vale 3 pontos e anula qualquer Envido. Se os dois lados tiverem Flor, a equipe da melhor Flor ganha 3 pontos por cada Flor anunciada. Em caso de empate no valor, vence o jogador mão (mesma lógica do Envido). Contra Flor só pode ser chamada se os dois lados tiverem Flor: se aceita, 6 pontos ao vencedor; se recusada, 4 pontos para quem chamou.</p>
           </div>
-          <div class="flor-hand" data-cards="7-basto,6-basto,5-basto"></div>
+        </div>
+
+        <h3 class="examples-title" data-i18n="flor.examples">Exemplos de Flor</h3>
+        <div class="examples-grid">
+          <article class="example-card">
+            <div class="hand" data-cards="7-basto,6-basto,5-basto"></div>
+            <div class="result" data-i18n="flor.ex1.value">7 + 6 + 5 + 20 = 38</div>
+            <div class="note" data-i18n="flor.ex1.note">Flor muito forte</div>
+          </article>
+          <article class="example-card">
+            <div class="hand" data-cards="1-copa,10-copa,12-copa"></div>
+            <div class="result" data-i18n="flor.ex2.value">1 + 0 + 0 + 20 = 21</div>
+            <div class="note" data-i18n="flor.ex2.note">10 e 12 valem zero</div>
+          </article>
+        </div>
+
+        <div class="flor-duel">
+          <span class="duel-title" data-i18n="flor.duel.title">Duelo de Flores</span>
+          <div class="duel-player winner">
+            <div class="hand" data-cards="3-oro,6-oro,11-oro"></div>
+            <div class="duel-score">
+              <span class="pts">29</span>
+              <span class="lbl" data-i18n="flor.duel.wins">vence</span>
+            </div>
+          </div>
+          <span class="duel-vs">vs</span>
+          <div class="duel-player">
+            <div class="hand" data-cards="1-espada,2-espada,4-espada"></div>
+            <div class="duel-score">
+              <span class="pts">27</span>
+            </div>
+          </div>
+          <p class="duel-note" data-i18n="flor.duel.note">As duas têm Flor: vence a maior, que leva 3 pontos por cada Flor anunciada.</p>
         </div>
       </div>
     </section>

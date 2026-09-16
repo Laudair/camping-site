@@ -77,7 +77,6 @@ const translations = {
     "flor.ex1.note": "Flor muito forte",
     "flor.ex2.value": "1 + 0 + 0 + 20 = 21",
     "flor.ex2.note": "10 e 12 valem zero",
-    "flor.duel.title": "Duelo de Flores",
     "flor.duel.wins": "vence",
     "flor.duel.note": "As duas têm Flor: vence a maior, que leva 3 pontos por cada Flor anunciada.",
 
@@ -196,7 +195,6 @@ const translations = {
     "flor.ex1.note": "Flor muy fuerte",
     "flor.ex2.value": "1 + 0 + 0 + 20 = 21",
     "flor.ex2.note": "10 y 12 valen cero",
-    "flor.duel.title": "Duelo de Flores",
     "flor.duel.wins": "gana",
     "flor.duel.note": "Ambas tienen Flor: gana la mayor, que se lleva 3 puntos por cada Flor anunciada.",
 
@@ -315,7 +313,6 @@ const translations = {
     "flor.ex1.note": "Very strong Flor",
     "flor.ex2.value": "1 + 0 + 0 + 20 = 21",
     "flor.ex2.note": "10 and 12 are worth zero",
-    "flor.duel.title": "Flor Showdown",
     "flor.duel.wins": "wins",
     "flor.duel.note": "Both have a Flor: the higher one wins, taking 3 points for each announced Flor.",
 

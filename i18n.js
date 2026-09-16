@@ -447,6 +447,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const audio = document.getElementById("site-music");
   const musicToggle = document.getElementById("music-toggle");
+  const MUSIC_KEY = "music-stopped";
 
   function setPlaying(state) {
     musicToggle.classList.toggle("playing", state);
@@ -456,7 +457,10 @@ document.addEventListener("DOMContentLoaded", () => {
   if (audio && musicToggle) {
     audio.volume = 0.6;
 
-    audio.addEventListener("play", () => setPlaying(true));
+    audio.addEventListener("play", () => {
+      setPlaying(true);
+      localStorage.removeItem(MUSIC_KEY);
+    });
     audio.addEventListener("pause", () => setPlaying(false));
 
     musicToggle.addEventListener("click", () => {
@@ -464,16 +468,21 @@ document.addEventListener("DOMContentLoaded", () => {
         audio.play().catch(() => {});
       } else {
         audio.pause();
+        localStorage.setItem(MUSIC_KEY, "1");
       }
     });
 
-    audio.play().catch(() => {
-      const start = () => {
-        if (audio.paused) audio.play().catch(() => {});
-      };
-      document.addEventListener("click", start, { once: true });
-      document.addEventListener("touchstart", start, { once: true });
-    });
+    if (localStorage.getItem(MUSIC_KEY) !== "1") {
+      audio.play().catch(() => {
+        const start = () => {
+          if (audio.paused && localStorage.getItem(MUSIC_KEY) !== "1") {
+            audio.play().catch(() => {});
+          }
+        };
+        document.addEventListener("click", start, { once: true });
+        document.addEventListener("touchstart", start, { once: true });
+      });
+    }
   }
 
   applyLanguage(currentLang());

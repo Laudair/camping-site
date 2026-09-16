@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Truco — Acampamento Farroupilha</title>
+    <meta name="description" content="Truco: o lendário jogo latino-americano de blefe e coragem. Regras, hierarquia das cartas, apostas e sinais secretos.">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="#">
+          <img src="assets/gauderia/cuia.svg" alt="">
+          <span data-i18n="brand">Acampamento Farroupilha</span>
+        </a>
+        <div class="header-right">
+          <span class="header-tag">
+            <img src="assets/gauderia/trophy.svg" alt="">
+            <span data-i18n="header.tag">Campeonato de Truco</span>
+          </span>
+          <div class="lang-toggle" aria-label="Language">
+            <button type="button" data-lang="pt">PT</button>
+            <button type="button" data-lang="es">ES</button>
+            <button type="button" data-lang="en">EN</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="wrap">
+        <span class="hero-top" data-i18n="hero.top">A arte da mentira</span>
+        <h1 data-i18n="hero.title">Truco</h1>
+        <p class="lede" data-i18n="hero.lede">O lendário jogo latino-americano de blefe, coragem e cálculo rápido.</p>
+        <p class="sub" data-i18n="hero.sub">Domine as manilhas e comande a mesa.</p>
+
+        <div class="card-fan">
+          <div class="fan" data-cards="1-espada,1-basto,7-espada,7-oro"></div>
+        </div>
+
+        <a class="cta" href="#foundations" data-i18n="hero.cta">Comece sua jornada</a>
+      </div>
+    </section>
+
+    <section class="section" id="foundations">
+      <div class="wrap">
+        <span class="section-label" data-i18n="foundations.label">Fundamentos</span>
+        <h2 class="section-title" data-i18n="foundations.title">Blueprint de início rápido</h2>
+        <p class="section-lead" data-i18n="foundations.desc">O Truco é mais que um jogo de sorte; é um campo de batalha tático de guerra psicológica, onde uma mão fraca pode vencer uma mão forte pela pura confiança.</p>
+
+        <div class="qs-grid">
+          <article class="qs-card">
+            <span class="n">01</span>
+            <h3 data-i18n="qs1.title">Alianças 2v2</h3>
+            <p data-i18n="qs1.body">Jogado em duplas. Coordene-se silenciosamente com seu parceiro do outro lado da mesa usando expressões faciais tradicionais.</p>
+          </article>
+          <article class="qs-card">
+            <span class="n">02</span>
+            <h3 data-i18n="qs2.title">Baralho espanhol</h3>
+            <p data-i18n="qs2.body">Jogado com um baralho tradicional de 40 cartas (sem 8, 9 ou coringas). Cada carta tem um peso único na batalha.</p>
+          </article>
+          <article class="qs-card">
+            <span class="n">03</span>
+            <h3 data-i18n="qs3.title">Corrida aos 30</h3>
+            <p data-i18n="qs3.body">Ganhe pontos ao longo de várias mãos. A primeira equipe a somar 30 pontos conquista a honra máxima da mesa.</p>
+          </article>
+        </div>
+
+        <div class="hierarchy">
+          <div class="hierarchy-head">
+            <div>
+              <h3 data-i18n="hierarchy.title">A hierarquia da baralha</h3>
+              <p data-i18n="hierarchy.body">Diferente dos jogos tradicionais, as cartas do Truco não seguem a ordem numérica. Memorizar essa hierarquia incomum é a chave para sobreviver às rodadas.</p>
+            </div>
+            <div>
+              <p data-i18n="hierarchy.note">As manilhas no topo são as cartas únicas do jogo; os 3 e os 2 também são ativos críticos.</p>
+            </div>
+          </div>
+          <div class="rank-grid" id="rank-grid"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="how-it-plays">
+      <div class="wrap">
+        <span class="section-label" data-i18n="howitplays.label">Como se joga</span>
+        <h2 class="section-title" data-i18n="rhythm.title">O ritmo da rodada</h2>
+        <p class="section-lead" data-i18n="rhythm.body">Uma mão consiste em até três cartas jogadas em sequência por cada jogador. Vencer rodadas cedo dá vantagem, mas segurar a carta certa para a hora certa é o que decide o jogo.</p>
+
+        <div class="trio-grid">
+          <article class="trio-card">
+            <h3 data-i18n="deal.title">A distribuição</h3>
+            <p data-i18n="deal.body">Cada jogador recebe 3 cartas, avaliadas para Envido e Flor.</p>
+          </article>
+          <article class="trio-card">
+            <h3 data-i18n="tricks.title">Três rodadas</h3>
+            <p data-i18n="tricks.body">Vence a mão quem ganhar 2 das 3 rodadas.</p>
+          </article>
+          <article class="trio-card">
+            <h3 data-i18n="handwin.title">Vitória da mão</h3>
+            <p data-i18n="handwin.body">O vencedor leva os pontos em disputa (ou mais, se houve Truco).</p>
+          </article>
+        </div>
+
+        <div class="calling">
+          <h3 data-i18n="calling.title">Chamando Truco!</h3>
+          <p data-i18n="calling.body">A qualquer momento durante uma rodada, você pode cantar Truco! para aumentar a aposta. A escada de escalada é um teste de nervos.</p>
+
+          <div class="flow">
+            <div class="step"><span class="pts">2</span><span class="name" data-i18n="flow.truco">Truco</span></div>
+            <div class="step"><span class="pts">3</span><span class="name" data-i18n="flow.retruco">Retruco</span></div>
+            <div class="step"><span class="pts">4</span><span class="name" data-i18n="flow.vale4">Vale 4</span></div>
+          </div>
+
+          <div class="options-grid">
+            <div class="option reject">
+              <h4 data-i18n="fold.title">Desistir (Não quero)</h4>
+              <p data-i18n="fold.body">A mão termina imediatamente. A equipe que desistiu concede os pontos.</p>
+            </div>
+            <div class="option accept">
+              <h4 data-i18n="accept.title">Aceitar (Quero)</h4>
+              <p data-i18n="accept.body">A batalha continua, e o vencedor do desafio leva os pontos.</p>
+            </div>
+            <div class="option raise">
+              <h4 data-i18n="reraise.title">Aumentar (Retruco)</h4>
+              <p data-i18n="reraise.body">Contra-ataque para Retruco (3 pts) ou Vale 4 (4 pts).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="envido">
+      <div class="wrap">
+        <span class="section-label" data-i18n="envido.label">A aposta lateral</span>
+        <h2 class="section-title" data-i18n="envido.title">Envido: sinergia de naipes</h2>
+        <p class="section-lead" data-i18n="envido.body">Os pontos são declarados e contados antes de as rodadas de cartas começarem.</p>
+
+        <div class="envido-grid">
+          <div class="calc">
+            <h3 data-i18n="envido.calcTitle">Como calcular o Envido</h3>
+            <div class="rule">
+              <span class="mark">+</span>
+              <span data-i18n="envido.calc1">Duas cartas do mesmo naipe: Carta A + Carta B + 20</span>
+            </div>
+            <div class="rule">
+              <span class="mark">≠</span>
+              <span data-i18n="envido.calc2">Naipes diferentes: apenas o valor da carta mais alta</span>
+            </div>
+          </div>
+
+          <div class="example">
+            <h4 data-i18n="envido.example">Exemplo de cálculo</h4>
+            <div class="hand" data-cards="7-espada,5-espada"></div>
+            <div class="result" data-i18n="envido.example.value">7 (espadas) + 5 (espadas) + 20 = 32 pontos</div>
+          </div>
+        </div>
+
+        <div class="flor">
+          <span class="badge" data-i18n="flor.badge">Privilégio raro</span>
+          <div class="flor-text">
+            <h3 data-i18n="flor.title">A Flor sagrada</h3>
+            <p data-i18n="flor.body">Se você receber as três cartas do mesmo naipe, anuncie imediatamente "Flor!" antes de a rodada começar. A Flor vale 3 pontos (ou 6 com Contra Flor) e anula qualquer Envido.</p>
+          </div>
+          <div class="flor-hand" data-cards="7-basto,6-basto,5-basto"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="scoring">
+      <div class="wrap">
+        <span class="section-label" data-i18n="scoring.label">Placar</span>
+        <h2 class="section-title" data-i18n="scoring.title">Matriz de pontuação</h2>
+
+        <div class="ledger">
+          <table>
+            <thead>
+              <tr>
+                <th data-i18n="score.col1">Chamada / Aposta</th>
+                <th data-i18n="score.col2">Pontos</th>
+                <th data-i18n="score.col3">Contexto</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td data-i18n="score.truco">Truco (Aceito)</td><td data-i18n="score.trucoPts">2 pontos</td><td data-i18n="score.trucoCtx">Aposta base pela vitória das rodadas</td></tr>
+              <tr><td data-i18n="score.retruco">Retruco (Aceito)</td><td data-i18n="score.retrucoPts">3 pontos</td><td data-i18n="score.retrucoCtx">Contra-aposta ao Truco</td></tr>
+              <tr><td data-i18n="score.vale4">Vale 4 (Aceito)</td><td data-i18n="score.vale4Pts">4 pontos</td><td data-i18n="score.vale4Ctx">Escalada final da aposta</td></tr>
+              <tr><td data-i18n="score.declined">Truco / Retruco (Recusado)</td><td data-i18n="score.declinedPts">1/2 pontos</td><td data-i18n="score.declinedCtx">Pontos vão para quem chamou</td></tr>
+              <tr><td data-i18n="score.envido">Envido (Aceito)</td><td data-i18n="score.envidoPts">2 pontos</td><td data-i18n="score.envidoCtx">Melhor combinação de naipe</td></tr>
+              <tr><td data-i18n="score.realEnvido">Real Envido</td><td data-i18n="score.realEnvidoPts">3 pontos</td><td data-i18n="score.realEnvidoCtx">Aposta elevada na comparação de par</td></tr>
+              <tr><td data-i18n="score.faltaEnvido">Falta Envido</td><td data-i18n="score.faltaEnvidoPts">Variável</td><td data-i18n="score.faltaEnvidoCtx">Quem vence leva a partida</td></tr>
+              <tr><td data-i18n="score.flor">Flor (Anunciada)</td><td data-i18n="score.florPts">3 pontos</td><td data-i18n="score.florCtx">Três cartas do mesmo naipe</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="wrap">
+        <p data-i18n="cta.body">Agora que você conhece a hierarquia, as apostas e os sinais secretos, está pronto para reivindicar seu lugar à mesa.</p>
+        <div class="shout" data-i18n="cta.final">¡Quiero vale cuatro!</div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <img class="flag" src="assets/gauderia/rs-flag.svg" alt="">
+        <p data-i18n="brand">Acampamento Farroupilha</p>
+      </div>
+    </footer>
+
+    <script src="i18n.js"></script>
+  </body>
+</html>

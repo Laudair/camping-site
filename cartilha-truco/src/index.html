@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cartilha - Torneio de Truco</title>
+    <link rel="stylesheet" href="./src/styles.css">
+  </head>
+  <body>
+    <main class="book">
+      <section class="page page-cover" id="pagina-1">
+        <header class="hero">
+          <div class="hero-side">
+            <img class="hero-icon cuia" src="./assets/gauderia/cuia.svg" alt="Cuia de chimarrao">
+            <p>Aqui o truco é sério, mas a parceria vem primeiro.</p>
+          </div>
+
+          <div class="hero-title">
+            <p class="eyebrow">Campeonato de</p>
+            <h1>Truco</h1>
+            <img class="flag-strip" src="./assets/gauderia/rs-flag.svg" alt="Bandeira do Rio Grande do Sul">
+            <p class="tagline">Amizade, respeito e boas jogadas</p>
+          </div>
+
+          <div class="hero-side right">
+            <div class="hero-card-fan" data-cards="1-espada,1-basto,7-espada,7-oro"></div>
+            <p class="wood-note">Truco, retruco, vale 4</p>
+          </div>
+        </header>
+
+        <div class="top-grid">
+          <article class="panel rules-panel">
+            <h2 class="brush-title">Regras gerais</h2>
+            <ul class="quick-list">
+              <li>Jogo em duplas: 2 contra 2.</li>
+              <li>Baralho espanhol de 40 cartas, sem 8, 9 e coringas.</li>
+              <li>Cada jogador recebe 3 cartas.</li>
+              <li>Há três formas de pontuar: Flor, Envido e Truco.</li>
+              <li>Depois de Flor e Envido, a mão tem 3 rodadas de cartas.</li>
+              <li>Vence a mão quem ganhar 2 das 3 rodadas.</li>
+              <li>Vence a partida quem chegar primeiro a 30 pontos.</li>
+            </ul>
+          </article>
+
+          <article class="panel score-panel">
+            <h2 class="brush-title">Pontuação rápida</h2>
+            <table class="score-table">
+              <tbody>
+                <tr><th>Sem truco</th><td>1 ponto</td></tr>
+                <tr><th>Truco</th><td>2 pontos</td></tr>
+                <tr><th>Retruco</th><td>3 pontos</td></tr>
+                <tr><th>Vale 4</th><td>4 pontos</td></tr>
+                <tr><th>Envido</th><td>+2 pontos</td></tr>
+                <tr><th>Real Envido</th><td>+3 pontos</td></tr>
+                <tr><th>Flor</th><td>3 pontos</td></tr>
+              </tbody>
+            </table>
+          </article>
+        </div>
+
+        <section class="order-section">
+          <h2 class="brush-title large">Ordem das cartas</h2>
+          <p class="section-subtitle">maior para menor</p>
+          <div class="rank-grid" id="rank-grid"></div>
+        </section>
+
+        <section class="tournament-section">
+          <div class="signup-board">
+            <h2 class="brush-title">Duplas inscritas</h2>
+            <ol class="team-lines">
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ol>
+          </div>
+
+          <div class="bracket-board">
+            <h2 class="brush-title">Chave do torneio</h2>
+            <div class="bracket">
+              <div class="bracket-column">
+                <span>Semifinal 1</span>
+                <div class="match-line"></div>
+                <span>Semifinal 2</span>
+                <div class="match-line"></div>
+              </div>
+              <div class="bracket-join"></div>
+              <div class="bracket-column final">
+                <span>Final</span>
+                <div class="match-line"></div>
+                <img src="./assets/gauderia/trophy.svg" alt="Trofeu">
+                <strong>Campeoes</strong>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <footer class="page-footer">
+          <strong>Truco é cultura</strong>
+          <span>Jogue limpo, respeite a parceria e aproveite a resenha.</span>
+        </footer>
+      </section>
+
+      <section class="page detail-page envido-page" id="pagina-2">
+        <header class="page-header">
+          <div>
+            <p class="eyebrow">Pontuação e disputa</p>
+            <h1>Envido</h1>
+          </div>
+          <img src="./assets/gauderia/rs-flag.svg" alt="Bandeira do Rio Grande do Sul">
+        </header>
+
+        <div class="detail-grid">
+          <article class="panel">
+            <h2 class="brush-title">Quando pedir</h2>
+            <p>No inicio da mão, no turno do jogador, antes das cartas serem disputadas.</p>
+            <p>Se o Truco já foi aceito, Envido não pode ser pedido. Antes do aceite, o adversário pode chamar Envido sobre o Truco, anulando aquela chamada; depois disso o Truco pode voltar.</p>
+          </article>
+
+          <article class="panel">
+            <h2 class="brush-title">Respostas</h2>
+            <ul class="compact-list">
+              <li><strong>Quero:</strong> aceita a aposta.</li>
+              <li><strong>Envido:</strong> aumenta em 2 pontos.</li>
+              <li><strong>Real Envido:</strong> aumenta em 3 pontos.</li>
+              <li><strong>Falta Envido:</strong> se aceito, quem vence ganha a partida.</li>
+              <li><strong>Não quero:</strong> recusa a última aposta.</li>
+            </ul>
+          </article>
+        </div>
+
+        <section class="panel wide">
+          <h2 class="brush-title">Sequência das apostas</h2>
+          <div class="bet-flow">
+            <span>Sem aposta</span>
+            <span>Envido</span>
+            <span>Real Envido</span>
+            <span>Falta Envido</span>
+          </div>
+          <p class="note">Quem aumenta a aposta não pode voltar para uma aposta menor. Real Envido e Falta Envido só podem aparecer uma vez na sequencia.</p>
+        </section>
+
+        <div class="detail-grid">
+          <article class="panel">
+            <h2 class="brush-title">Como calcular</h2>
+            <ul class="compact-list">
+              <li><strong>Duas cartas do mesmo naipe:</strong> some as duas cartas e acrescente 20.</li>
+              <li><strong>10, 11 e 12:</strong> contam como zero no Envido.</li>
+              <li><strong>Três naipes diferentes:</strong> vale a maior carta da mão.</li>
+              <li><strong>Maior Envido:</strong> 33, com 7 + 6 do mesmo naipe.</li>
+              <li><strong>Menor Envido:</strong> 0, quando só ha figuras sem valor útil.</li>
+            </ul>
+          </article>
+
+          <article class="panel">
+            <h2 class="brush-title">Desempate</h2>
+            <p>Se dois jogadores empatarem no valor do Envido, vence o jogador mão, ou seja, quem joga primeiro naquela mão.</p>
+            <p class="callout">Dica de torneio: antes de iniciar, deixe claro quem é o mão em cada rodada.</p>
+          </article>
+        </div>
+
+        <section class="examples">
+          <h2 class="brush-title large">Exemplos rapidos</h2>
+          <div class="example-grid">
+            <article class="example-card">
+              <div class="card-stack" data-cards="7-oro,6-oro"></div>
+              <strong>7 + 6 + 20 = 33</strong>
+              <span>Maior Envido possível.</span>
+            </article>
+            <article class="example-card">
+              <div class="card-stack" data-cards="3-copa,12-copa"></div>
+              <strong>3 + 0 + 20 = 23</strong>
+              <span>Figuras valem zero.</span>
+            </article>
+            <article class="example-card">
+              <div class="card-stack" data-cards="10-basto,11-espada,12-copa"></div>
+              <strong>0 ponto</strong>
+              <span>Sem par de naipe e sem carta numérica útil.</span>
+            </article>
+          </div>
+        </section>
+
+        <footer class="page-footer">
+          <strong>Página 2</strong>
+          <span>Envido decide no cálculo. Empate decide no mão.</span>
+        </footer>
+      </section>
+
+      <section class="page detail-page flor-page" id="pagina-3">
+        <header class="page-header">
+          <div>
+            <p class="eyebrow">Três cartas do mesmo naipe</p>
+            <h1>Flor</h1>
+          </div>
+          <img src="./assets/gauderia/cuia.svg" alt="Cuia de chimarrao">
+        </header>
+
+        <div class="detail-grid">
+          <article class="panel">
+            <h2 class="brush-title">O que é</h2>
+            <p>Flor acontece quando as 3 cartas do jogador sao do mesmo naipe.</p>
+            <p>Quem tem Flor deve anunciar dizendo "Flor". Se mais de uma Flor for anunciada, compara-se o valor das Flores.</p>
+          </article>
+
+          <article class="panel">
+            <h2 class="brush-title">Pontuação</h2>
+            <table class="score-table">
+              <tbody>
+                <tr><th>Flor simples</th><td>3 pontos</td></tr>
+                <tr><th>Cada Flor anunciada</th><td>3 pontos para o time da melhor Flor</td></tr>
+                <tr><th>Contra Flor aceita</th><td>6 pontos ao vencedor</td></tr>
+                <tr><th>Contra Flor recusada</th><td>4 pontos ao adversário</td></tr>
+              </tbody>
+            </table>
+          </article>
+        </div>
+
+        <section class="panel wide">
+          <h2 class="brush-title">Como calcular</h2>
+          <p>Use a mesma lógica do Envido: some os valores das três cartas e acrescente 20. As cartas 10, 11 e 12 não somam valor.</p>
+          <div class="formula-strip">
+            <span>Flor = carta 1 + carta 2 + carta 3 + 20</span>
+            <span>10, 11 e 12 = 0</span>
+          </div>
+        </section>
+
+        <section class="examples">
+          <h2 class="brush-title large">Exemplos rapidos</h2>
+          <div class="example-grid">
+            <article class="example-card">
+              <div class="card-stack" data-cards="7-basto,6-basto,5-basto"></div>
+              <strong>7 + 6 + 5 + 20 = 38</strong>
+              <span>Flor muito forte.</span>
+            </article>
+            <article class="example-card">
+              <div class="card-stack" data-cards="1-copa,10-copa,12-copa"></div>
+              <strong>1 + 0 + 0 + 20 = 21</strong>
+              <span>Figuras não aumentam o valor.</span>
+            </article>
+            <article class="example-card">
+              <div class="card-stack" data-cards="3-oro,6-oro,11-oro"></div>
+              <strong>3 + 6 + 0 + 20 = 29</strong>
+              <span>Boa Flor para disputar.</span>
+            </article>
+          </div>
+        </section>
+
+        <div class="detail-grid">
+          <article class="panel">
+            <h2 class="brush-title">Contra Flor</h2>
+            <p>Só pode ser chamada quando os dois lados têm Flor. Se for aceita, a melhor Flor leva 6 pontos. Se for recusada, quem chamou leva 4 pontos.</p>
+          </article>
+
+          <article class="panel">
+            <h2 class="brush-title">Desempate</h2>
+            <p>Quando duas Flores tiverem o mesmo valor, use o critério do jogador mão para o torneio, mantendo a mesma lógica de desempate indicada para o Envido.</p>
+            <p class="callout">Regra editável: se o torneio preferir outro critério, altere este bloco antes de imprimir.</p>
+          </article>
+        </div>
+
+        <footer class="page-footer">
+          <strong>Página 3</strong>
+          <span>Flor deve ser anunciada. Contra Flor só existe se os dois lados tiverem Flor.</span>
+        </footer>
+      </section>
+
+      <section class="page detail-page truco-page" id="pagina-4">
+        <header class="page-header">
+          <div>
+            <p class="eyebrow">A disputa das cartas</p>
+            <h1>Truco</h1>
+          </div>
+          <div class="hero-card-fan small" data-cards="1-espada,1-basto,7-espada"></div>
+        </header>
+
+        <div class="detail-grid">
+          <article class="panel">
+            <h2 class="brush-title">Como funciona</h2>
+            <ul class="compact-list">
+              <li>Depois de Flor e Envido, a mão e jogada em 3 rodadas.</li>
+              <li>Em cada rodada, cada jogador baixa uma carta.</li>
+              <li>A carta mais forte vence a rodada.</li>
+              <li>Vence a mão quem ganhar 2 rodadas.</li>
+              <li>Se ninguém pedir Truco, a mão vale 1 ponto.</li>
+            </ul>
+          </article>
+
+          <article class="panel">
+            <h2 class="brush-title">Apostas do Truco</h2>
+            <table class="score-table">
+              <tbody>
+                <tr><th>Truco</th><td>2 pontos</td></tr>
+                <tr><th>Retruco</th><td>3 pontos</td></tr>
+                <tr><th>Vale 4</th><td>4 pontos</td></tr>
+              </tbody>
+            </table>
+            <p class="note">A aposta pode ser aceita, recusada ou aumentada na ordem abaixo.</p>
+          </article>
+        </div>
+
+        <section class="panel wide">
+          <h2 class="brush-title">Sequência das apostas</h2>
+          <div class="bet-flow truco-flow">
+            <span>Sem aposta</span>
+            <span>Truco</span>
+            <span>Retruco</span>
+            <span>Vale 4</span>
+          </div>
+          <ul class="compact-list columns">
+            <li><strong>Quero:</strong> aceita e joga pelos pontos em disputa.</li>
+            <li><strong>Não quero:</strong> recusa e entrega os pontos ao adversário.</li>
+            <li><strong>Aumentar:</strong> sobe para o próximo nível da sequencia.</li>
+            <li><strong>Envido sobre Truco:</strong> pode anular aquela chamada de Truco antes do aceite.</li>
+          </ul>
+        </section>
+
+        <section class="rounds-panel">
+          <h2 class="brush-title large">As 3 rodadas</h2>
+          <div class="round-grid">
+            <article>
+              <span>1</span>
+              <strong>Primeira</strong>
+              <p>Comeca a disputa. Guarde quem venceu ou se ficou parda.</p>
+            </article>
+            <article>
+              <span>2</span>
+              <strong>Segunda</strong>
+              <p>Se alguém fizer 2 vitórias, a mão termina aqui.</p>
+            </article>
+            <article>
+              <span>3</span>
+              <strong>Terceira</strong>
+              <p>Resolve a mão quando ainda não ha vencedor.</p>
+            </article>
+          </div>
+        </section>
+
+        <div class="detail-grid">
+          <article class="panel">
+            <h2 class="brush-title">Desempates</h2>
+            <p>O arquivo de regras do repo não detalha a regra de parda. Para torneio, deixe combinado antes do primeiro jogo.</p>
+            <ul class="compact-list">
+              <li>Empate na 1ª: quem vencer a 2ª leva a vantagem.</li>
+              <li>Empate na 2ª: vale a vantagem de quem venceu a 1ª.</li>
+              <li>Empate na 3ª: vale a vantagem de quem venceu a 1ª.</li>
+              <li>Três empates: vence o jogador mão.</li>
+            </ul>
+          </article>
+
+          <article class="panel">
+            <h2 class="brush-title">Lembrete rapido</h2>
+            <div class="mini-order">
+              <div class="card-stack tight" data-cards="1-espada,1-basto,7-espada,7-oro"></div>
+              <p>As quatro cartas mais fortes sao as manilhas da ordem: 1 de espada, 1 de basto, 7 de espada e 7 de ouro.</p>
+            </div>
+          </article>
+        </div>
+
+        <footer class="page-footer">
+          <strong>Página 4</strong>
+          <span>Truco é aposta, memória das rodadas e leitura da ordem das cartas.</span>
+        </footer>
+      </section>
+    </main>
+
+    <script src="./src/cartilha.js"></script>
+  </body>
+</html>

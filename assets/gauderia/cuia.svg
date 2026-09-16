@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 260" role="img" aria-labelledby="title">
+  <title id="title">Cuia de chimarrao</title>
+  <path d="M132 20c8-9 20 1 14 12L91 142c-4 8-17 3-13-6z" fill="#17120d"/>
+  <path d="M62 62c18-17 77-17 95 0 7 7 5 20-4 25l-6 4c-2 31-13 71-27 101l13 27c5 10-2 21-13 21H99c-11 0-18-11-13-21l13-27C85 162 74 122 72 91l-6-4c-9-5-11-18-4-25z" fill="#17120d"/>
+  <ellipse cx="110" cy="72" rx="52" ry="19" fill="#f2dfb6" stroke="#17120d" stroke-width="9"/>
+  <ellipse cx="110" cy="72" rx="33" ry="10" fill="#5b3a1c"/>
+  <path d="M70 101c12 8 67 8 80 0-1 33-13 75-29 104H99c-16-29-28-71-29-104z" fill="#17120d"/>
+  <path d="M82 128c16 7 39 8 57 0M87 154c13 6 31 7 46 0" fill="none" stroke="#f2dfb6" stroke-width="6" stroke-linecap="round" opacity=".85"/>
+</svg>

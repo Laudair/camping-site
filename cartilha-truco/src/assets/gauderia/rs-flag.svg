@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 120" role="img" aria-labelledby="title">
+  <title id="title">Bandeira do Rio Grande do Sul</title>
+  <path d="M0 0h900v120H0z" fill="#f2d15a"/>
+  <path d="M0 0h900L0 120z" fill="#16824a"/>
+  <path d="M900 0v120H0z" fill="#b82424" opacity=".96"/>
+  <path d="M0 0h900L0 120z" fill="#16824a"/>
+  <path d="M900 0L0 120h900z" fill="#e5ba39"/>
+  <path d="M0 64 900 0v43L0 107z" fill="#b82424"/>
+  <circle cx="450" cy="60" r="35" fill="#f5e8bf" stroke="#1b150f" stroke-width="5"/>
+  <text x="450" y="73" text-anchor="middle" font-family="Georgia, serif" font-size="38" font-weight="700" fill="#1b150f">RS</text>
+</svg>

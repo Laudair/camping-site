@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Truco — Acampamento Farroupilha</title>
-    <meta name="description" content="Truco: o lendário jogo latino-americano de blefe e coragem. Regras, hierarquia das cartas, apostas e sinais secretos.">
+    <meta name="description" content="Truco: o lendário jogo latino-americano de blefe e coragem. Regras, hierarquia das cartas, Envido, Flor e pontuação.">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -24,9 +24,30 @@
             <button type="button" data-lang="es">ES</button>
             <button type="button" data-lang="en">EN</button>
           </div>
+          <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
         </div>
       </div>
     </header>
+
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Índice móvel">
+      <a href="#foundations" data-i18n="nav.foundations">Fundamentos</a>
+      <a href="#how-it-plays" data-i18n="nav.howitplays">Como se joga</a>
+      <a href="#envido" data-i18n="nav.envido">Envido</a>
+      <a href="#flor" data-i18n="nav.flor">Flor</a>
+      <a href="#scoring" data-i18n="nav.scoring">Pontuação</a>
+    </nav>
+
+    <nav class="chapters" aria-label="Índice">
+      <div class="wrap">
+        <a href="#foundations" data-i18n="nav.foundations">Fundamentos</a>
+        <a href="#how-it-plays" data-i18n="nav.howitplays">Como se joga</a>
+        <a href="#envido" data-i18n="nav.envido">Envido</a>
+        <a href="#flor" data-i18n="nav.flor">Flor</a>
+        <a href="#scoring" data-i18n="nav.scoring">Pontuação</a>
+      </div>
+    </nav>
 
     <section class="hero">
       <div class="wrap">
@@ -148,6 +169,10 @@
               <span class="mark">≠</span>
               <span data-i18n="envido.calc2">Naipes diferentes: apenas o valor da carta mais alta</span>
             </div>
+            <div class="rule">
+              <span class="mark">=</span>
+              <span data-i18n="envido.tie">Empate: vence o jogador mão (quem joga primeiro na rodada).</span>
+            </div>
           </div>
 
           <div class="example">
@@ -157,11 +182,11 @@
           </div>
         </div>
 
-        <div class="flor">
+        <div class="flor" id="flor">
           <span class="badge" data-i18n="flor.badge">Privilégio raro</span>
           <div class="flor-text">
             <h3 data-i18n="flor.title">A Flor sagrada</h3>
-            <p data-i18n="flor.body">Se você receber as três cartas do mesmo naipe, anuncie imediatamente "Flor!" antes de a rodada começar. A Flor vale 3 pontos (ou 6 com Contra Flor) e anula qualquer Envido.</p>
+            <p data-i18n="flor.body">Se você receber as três cartas do mesmo naipe, anuncie imediatamente "Flor!" antes de a rodada começar. A Flor vale 3 pontos e anula qualquer Envido. Se os dois lados tiverem Flor, a equipe da melhor Flor ganha 3 pontos por cada Flor anunciada. Contra Flor só pode ser chamada se os dois lados tiverem Flor: se aceita, 6 pontos ao vencedor; se recusada, 4 pontos para quem chamou.</p>
           </div>
           <div class="flor-hand" data-cards="7-basto,6-basto,5-basto"></div>
         </div>
@@ -191,6 +216,7 @@
               <tr><td data-i18n="score.realEnvido">Real Envido</td><td data-i18n="score.realEnvidoPts">3 pontos</td><td data-i18n="score.realEnvidoCtx">Aposta elevada na comparação de par</td></tr>
               <tr><td data-i18n="score.faltaEnvido">Falta Envido</td><td data-i18n="score.faltaEnvidoPts">Variável</td><td data-i18n="score.faltaEnvidoCtx">Quem vence leva a partida</td></tr>
               <tr><td data-i18n="score.flor">Flor (Anunciada)</td><td data-i18n="score.florPts">3 pontos</td><td data-i18n="score.florCtx">Três cartas do mesmo naipe</td></tr>
+              <tr><td data-i18n="score.contraFlor">Contra Flor</td><td data-i18n="score.contraFlorPts">6 / 4 pontos</td><td data-i18n="score.contraFlorCtx">Aceita: 6 ao vencedor · recusada: 4 ao chamador</td></tr>
             </tbody>
           </table>
         </div>

@@ -2,6 +2,11 @@ const translations = {
   pt: {
     "brand": "Acampamento Farroupilha",
     "header.tag": "Campeonato de Truco",
+    "nav.foundations": "Fundamentos",
+    "nav.howitplays": "Como se joga",
+    "nav.envido": "Envido",
+    "nav.flor": "Flor",
+    "nav.scoring": "Pontuação",
 
     "hero.top": "A arte da mentira",
     "hero.title": "Truco",
@@ -53,11 +58,12 @@ const translations = {
     "envido.calcTitle": "Como calcular o Envido",
     "envido.calc1": "Duas cartas do mesmo naipe: Carta A + Carta B + 20",
     "envido.calc2": "Naipes diferentes: apenas o valor da carta mais alta",
+    "envido.tie": "Empate: vence o jogador mão (quem joga primeiro na rodada).",
     "envido.example": "Exemplo de cálculo",
     "envido.example.value": "7 (espadas) + 5 (espadas) + 20 = 32 pontos",
     "flor.badge": "Privilégio raro",
     "flor.title": "A Flor sagrada",
-    "flor.body": "Se você receber as três cartas do mesmo naipe, anuncie imediatamente \"Flor!\" antes de a rodada começar. A Flor vale 3 pontos (ou 6 com Contra Flor) e anula qualquer Envido.",
+    "flor.body": "Se você receber as três cartas do mesmo naipe, anuncie imediatamente \"Flor!\" antes de a rodada começar. A Flor vale 3 pontos e anula qualquer Envido. Se os dois lados tiverem Flor, a equipe da melhor Flor ganha 3 pontos por cada Flor anunciada. Contra Flor só pode ser chamada se os dois lados tiverem Flor: se aceita, 6 pontos ao vencedor; se recusada, 4 pontos para quem chamou.",
 
     "scoring.label": "Placar",
     "scoring.title": "Matriz de pontuação",
@@ -88,6 +94,9 @@ const translations = {
     "score.flor": "Flor (Anunciada)",
     "score.florPts": "3 pontos",
     "score.florCtx": "Três cartas do mesmo naipe",
+    "score.contraFlor": "Contra Flor",
+    "score.contraFlorPts": "6 / 4 pontos",
+    "score.contraFlorCtx": "Aceita: 6 ao vencedor · recusada: 4 ao chamador",
 
     "cta.body": "Agora que você conhece a hierarquia e as apostas, está pronto para reivindicar seu lugar à mesa.",
     "cta.final": "¡Quiero vale cuatro!"
@@ -96,6 +105,11 @@ const translations = {
   es: {
     "brand": "Acampamento Farroupilha",
     "header.tag": "Campeonato de Truco",
+    "nav.foundations": "Fundamentos",
+    "nav.howitplays": "Cómo se juega",
+    "nav.envido": "Envido",
+    "nav.flor": "Flor",
+    "nav.scoring": "Puntuación",
 
     "hero.top": "El arte de la mentira",
     "hero.title": "Truco",
@@ -147,11 +161,12 @@ const translations = {
     "envido.calcTitle": "Cómo se calcula el Envido",
     "envido.calc1": "Dos cartas del mismo palo: Carta A + Carta B + 20",
     "envido.calc2": "Palos distintos: solo el valor de la carta más alta",
+    "envido.tie": "Empate: gana el jugador mano (quien juega primero en la ronda).",
     "envido.example": "Ejemplo de cálculo",
     "envido.example.value": "7 (espadas) + 5 (espadas) + 20 = 32 puntos",
     "flor.badge": "Privilegio raro",
     "flor.title": "La Flor sagrada",
-    "flor.body": "Si recibes las tres cartas del mismo palo, anuncia de inmediato \"¡Flor!\" antes de que comience la ronda. La Flor vale 3 puntos (o 6 con Contra Flor) y anula cualquier Envido.",
+    "flor.body": "Si recibes las tres cartas del mismo palo, anuncia de inmediato \"¡Flor!\" antes de que comience la ronda. La Flor vale 3 puntos y anula cualquier Envido. Si ambos lados tienen Flor, el equipo de la mejor Flor gana 3 puntos por cada Flor anunciada. Contra Flor solo puede cantarse si ambos lados tienen Flor: si se acepta, 6 puntos al ganador; si se rechaza, 4 puntos para quien la cantó.",
 
     "scoring.label": "Marcador",
     "scoring.title": "Matriz de puntuación",
@@ -182,6 +197,9 @@ const translations = {
     "score.flor": "Flor (Declarada)",
     "score.florPts": "3 puntos",
     "score.florCtx": "Tres cartas del mismo palo",
+    "score.contraFlor": "Contra Flor",
+    "score.contraFlorPts": "6 / 4 puntos",
+    "score.contraFlorCtx": "Aceptada: 6 al ganador · rechazada: 4 al que cantó",
 
     "cta.body": "Ahora que conoces la jerarquía y las apuestas, estás listo para reclamar tu lugar en la mesa.",
     "cta.final": "¡Quiero vale cuatro!"
@@ -190,6 +208,11 @@ const translations = {
   en: {
     "brand": "Acampamento Farroupilha",
     "header.tag": "Truco Championship",
+    "nav.foundations": "Foundations",
+    "nav.howitplays": "How it plays",
+    "nav.envido": "Envido",
+    "nav.flor": "Flor",
+    "nav.scoring": "Scoring",
 
     "hero.top": "The art of lying",
     "hero.title": "Truco",
@@ -241,11 +264,12 @@ const translations = {
     "envido.calcTitle": "How Envido is Calculated",
     "envido.calc1": "Two cards of same suit: Card A + Card B + 20",
     "envido.calc2": "No matching suits: only the single highest card value",
+    "envido.tie": "Tie: the hand player wins (whoever plays first in the round).",
     "envido.example": "Example Hand Calculation",
     "envido.example.value": "7 (Swords) + 5 (Swords) + 20 = 32 points",
     "flor.badge": "Rare privilege",
     "flor.title": "The Sacred \"Flor\"",
-    "flor.body": "If you are dealt all three cards of the same suit, immediately call \"Flor!\" before the round begins. The Flor is worth 3 points (or 6 with Contra Flor) and overrides any Envido.",
+    "flor.body": "If you are dealt all three cards of the same suit, immediately call \"Flor!\" before the round begins. The Flor is worth 3 points and overrides any Envido. If both sides have a Flor, the team with the best Flor scores 3 points for each announced Flor. Contra Flor can only be called if both sides have a Flor: if accepted, 6 points to the winner; if rejected, 4 points to the caller.",
 
     "scoring.label": "Scoring ledger",
     "scoring.title": "Scoring Summary Matrix",
@@ -276,6 +300,9 @@ const translations = {
     "score.flor": "Flor (Declared)",
     "score.florPts": "3 points",
     "score.florCtx": "Three cards of the same suit",
+    "score.contraFlor": "Contra Flor",
+    "score.contraFlorPts": "6 / 4 points",
+    "score.contraFlorCtx": "Accepted: 6 to winner · rejected: 4 to caller",
 
     "cta.body": "Now that you know the hierarchy and the bids, you are ready to claim your place at the table.",
     "cta.final": "¡Quiero vale cuatro!"
@@ -373,6 +400,26 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".lang-toggle button").forEach((btn) => {
     btn.addEventListener("click", () => applyLanguage(btn.dataset.lang));
   });
+
+  const navToggle = document.querySelector(".nav-toggle");
+  const mobileMenu = document.querySelector(".mobile-menu");
+
+  function setMenu(open) {
+    if (!navToggle || !mobileMenu) return;
+    navToggle.classList.toggle("open", open);
+    mobileMenu.classList.toggle("open", open);
+    navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+  }
+
+  if (navToggle && mobileMenu) {
+    navToggle.addEventListener("click", () => {
+      setMenu(!mobileMenu.classList.contains("open"));
+    });
+
+    mobileMenu.querySelectorAll("a").forEach((a) => {
+      a.addEventListener("click", () => setMenu(false));
+    });
+  }
 
   applyLanguage(currentLang());
 });

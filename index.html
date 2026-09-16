@@ -158,35 +158,55 @@
         <h2 class="section-title" data-i18n="envido.title">Envido: sinergia de naipes</h2>
         <p class="section-lead" data-i18n="envido.body">Os pontos são declarados e contados antes de as rodadas de cartas começarem.</p>
 
-        <div class="envido-grid">
-          <div class="calc">
-            <h3 data-i18n="envido.calcTitle">Como calcular o Envido</h3>
-            <div class="rule">
-              <span class="mark">+</span>
-              <span data-i18n="envido.calc1">Duas cartas do mesmo naipe: Carta A + Carta B + 20</span>
-            </div>
-            <div class="rule">
-              <span class="mark">≠</span>
-              <span data-i18n="envido.calc2">Naipes diferentes: apenas o valor da carta mais alta</span>
-            </div>
-            <div class="rule">
-              <span class="mark">=</span>
-              <span data-i18n="envido.tie">Empate: vence o jogador mão (quem joga primeiro na rodada).</span>
-            </div>
+        <div class="calc">
+          <h3 data-i18n="envido.calcTitle">Como calcular o Envido</h3>
+          <div class="rule">
+            <span class="mark">+</span>
+            <span data-i18n="envido.calc1">Duas cartas do mesmo naipe: Carta A + Carta B + 20</span>
           </div>
+          <div class="rule">
+            <span class="mark">≠</span>
+            <span data-i18n="envido.calc2">Naipes diferentes: apenas o valor da carta mais alta</span>
+          </div>
+          <div class="rule">
+            <span class="mark">0</span>
+            <span data-i18n="envido.calc3">As cartas 10, 11 e 12 não somam valor (valem 0).</span>
+          </div>
+          <div class="rule">
+            <span class="mark">=</span>
+            <span data-i18n="envido.tie">Empate: vence o jogador mão (quem joga primeiro na rodada).</span>
+          </div>
+        </div>
 
-          <div class="example">
-            <h4 data-i18n="envido.example">Exemplo de cálculo</h4>
+        <h3 class="examples-title" data-i18n="envido.examples">Exemplos</h3>
+        <div class="examples-grid">
+          <article class="example-card">
             <div class="hand" data-cards="7-espada,5-espada"></div>
-            <div class="result" data-i18n="envido.example.value">7 (espadas) + 5 (espadas) + 20 = 32 pontos</div>
-          </div>
+            <div class="result" data-i18n="ex.e1.value">7 + 5 + 20 = 32</div>
+            <div class="note" data-i18n="ex.e1.note">Duas cartas do mesmo naipe</div>
+          </article>
+          <article class="example-card">
+            <div class="hand" data-cards="7-oro,6-oro"></div>
+            <div class="result" data-i18n="ex.e2.value">7 + 6 + 20 = 33</div>
+            <div class="note" data-i18n="ex.e2.note">Maior Envido possível</div>
+          </article>
+          <article class="example-card">
+            <div class="hand" data-cards="3-copa,12-copa"></div>
+            <div class="result" data-i18n="ex.e3.value">3 + 0 + 20 = 23</div>
+            <div class="note" data-i18n="ex.e3.note">O 12 não conta</div>
+          </article>
+          <article class="example-card">
+            <div class="hand" data-cards="10-basto,11-espada"></div>
+            <div class="result" data-i18n="ex.e4.value">0 pontos</div>
+            <div class="note" data-i18n="ex.e4.note">Sem par: 10 e 11 valem zero</div>
+          </article>
         </div>
 
         <div class="flor" id="flor">
           <span class="badge" data-i18n="flor.badge">Privilégio raro</span>
           <div class="flor-text">
             <h3 data-i18n="flor.title">A Flor sagrada</h3>
-            <p data-i18n="flor.body">Se você receber as três cartas do mesmo naipe, anuncie imediatamente "Flor!" antes de a rodada começar. A Flor vale 3 pontos e anula qualquer Envido. Se os dois lados tiverem Flor, a equipe da melhor Flor ganha 3 pontos por cada Flor anunciada. Contra Flor só pode ser chamada se os dois lados tiverem Flor: se aceita, 6 pontos ao vencedor; se recusada, 4 pontos para quem chamou.</p>
+            <p data-i18n="flor.body">Se você receber as três cartas do mesmo naipe, anuncie imediatamente "Flor!" antes de a rodada começar. A Flor vale 3 pontos e anula qualquer Envido. Se os dois lados tiverem Flor, a equipe da melhor Flor ganha 3 pontos por cada Flor anunciada. Em caso de empate no valor, vence o jogador mão (mesma lógica do Envido). Contra Flor só pode ser chamada se os dois lados tiverem Flor: se aceita, 6 pontos ao vencedor; se recusada, 4 pontos para quem chamou.</p>
           </div>
           <div class="flor-hand" data-cards="7-basto,6-basto,5-basto"></div>
         </div>
@@ -236,6 +256,12 @@
         <p data-i18n="brand">Acampamento Farroupilha</p>
       </div>
     </footer>
+
+    <audio id="site-music" src="assets/audio/music.mp3" loop preload="auto"></audio>
+    <button id="music-toggle" class="music-toggle" type="button" aria-label="Música" aria-pressed="false">
+      <svg class="ico-note" viewBox="0 0 24 24" fill="currentColor"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+      <svg class="ico-stop" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="12" height="14" rx="2"/></svg>
+    </button>
 
     <script src="i18n.js"></script>
   </body>

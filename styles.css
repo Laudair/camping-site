@@ -241,6 +241,55 @@ a {
   scroll-margin-top: 128px;
 }
 
+/* ---------- Music toggle ---------- */
+.music-toggle {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 60;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  border: 1px solid var(--gold);
+  background: rgba(20, 33, 26, 0.92);
+  color: var(--gold);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  transition: transform 0.15s ease;
+}
+
+.music-toggle:hover {
+  transform: translateY(-2px);
+}
+
+.music-toggle svg {
+  width: 24px;
+  height: 24px;
+}
+
+.music-toggle .ico-stop {
+  display: none;
+}
+
+.music-toggle.playing .ico-note {
+  display: none;
+}
+
+.music-toggle.playing .ico-stop {
+  display: block;
+}
+
+.music-toggle.playing {
+  animation: pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(201, 162, 39, 0.4); }
+  50% { box-shadow: 0 0 0 14px rgba(201, 162, 39, 0); }
+}
+
 /* ---------- Hero ---------- */
 .hero {
   position: relative;
@@ -617,15 +666,8 @@ a {
 }
 
 /* ---------- Envido ---------- */
-.envido-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  margin-top: 34px;
-  align-items: start;
-}
-
 .calc {
+  margin-top: 34px;
   background: linear-gradient(180deg, var(--felt-2), var(--felt));
   border: 1px solid var(--line);
   border-radius: 16px;
@@ -661,42 +703,57 @@ a {
   color: var(--cream);
 }
 
-.example {
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  padding: 28px;
-  background: var(--panel);
-}
-
-.example h4 {
+.examples-title {
   font-family: inherit;
   text-transform: uppercase;
   letter-spacing: 0.16em;
   font-size: 12px;
   color: var(--gold);
-  margin-bottom: 18px;
+  margin: 30px 0 14px;
 }
 
-.example .hand {
+.examples-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 14px;
+}
+
+.example-card {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 20px;
+  background: var(--panel);
+  text-align: center;
+}
+
+.example-card .hand {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  margin-bottom: 16px;
+  gap: 8px;
+  min-height: 92px;
+  margin-bottom: 12px;
 }
 
-.example .hand img {
-  width: 78px;
-  border-radius: 7px;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
+.example-card .hand img {
+  width: 62px;
+  border-radius: 6px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.5);
   background: #fff8e8;
 }
 
-.example .result {
+.example-card .result {
   font-family: var(--serif);
-  font-size: 26px;
-  text-align: center;
+  font-size: 21px;
   color: var(--cream);
+}
+
+.example-card .note {
+  display: block;
+  margin-top: 6px;
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: 600;
 }
 
 /* Flor */
@@ -929,8 +986,7 @@ tbody td:last-child {
     grid-template-columns: 1fr;
   }
 
-  .hierarchy-head,
-  .envido-grid {
+  .hierarchy-head {
     grid-template-columns: 1fr;
     gap: 24px;
   }

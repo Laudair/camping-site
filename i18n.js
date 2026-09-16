@@ -58,12 +58,20 @@ const translations = {
     "envido.calcTitle": "Como calcular o Envido",
     "envido.calc1": "Duas cartas do mesmo naipe: Carta A + Carta B + 20",
     "envido.calc2": "Naipes diferentes: apenas o valor da carta mais alta",
+    "envido.calc3": "As cartas 10, 11 e 12 não somam valor (valem 0).",
     "envido.tie": "Empate: vence o jogador mão (quem joga primeiro na rodada).",
-    "envido.example": "Exemplo de cálculo",
-    "envido.example.value": "7 (espadas) + 5 (espadas) + 20 = 32 pontos",
+    "envido.examples": "Exemplos",
+    "ex.e1.value": "7 + 5 + 20 = 32",
+    "ex.e1.note": "Duas cartas do mesmo naipe",
+    "ex.e2.value": "7 + 6 + 20 = 33",
+    "ex.e2.note": "Maior Envido possível",
+    "ex.e3.value": "3 + 0 + 20 = 23",
+    "ex.e3.note": "O 12 não conta",
+    "ex.e4.value": "0 pontos",
+    "ex.e4.note": "Sem par: 10 e 11 valem zero",
     "flor.badge": "Privilégio raro",
     "flor.title": "A Flor sagrada",
-    "flor.body": "Se você receber as três cartas do mesmo naipe, anuncie imediatamente \"Flor!\" antes de a rodada começar. A Flor vale 3 pontos e anula qualquer Envido. Se os dois lados tiverem Flor, a equipe da melhor Flor ganha 3 pontos por cada Flor anunciada. Contra Flor só pode ser chamada se os dois lados tiverem Flor: se aceita, 6 pontos ao vencedor; se recusada, 4 pontos para quem chamou.",
+    "flor.body": "Se você receber as três cartas do mesmo naipe, anuncie imediatamente \"Flor!\" antes de a rodada começar. A Flor vale 3 pontos e anula qualquer Envido. Se os dois lados tiverem Flor, a equipe da melhor Flor ganha 3 pontos por cada Flor anunciada. Em caso de empate no valor, vence o jogador mão (mesma lógica do Envido). Contra Flor só pode ser chamada se os dois lados tiverem Flor: se aceita, 6 pontos ao vencedor; se recusada, 4 pontos para quem chamou.",
 
     "scoring.label": "Placar",
     "scoring.title": "Matriz de pontuação",
@@ -161,12 +169,20 @@ const translations = {
     "envido.calcTitle": "Cómo se calcula el Envido",
     "envido.calc1": "Dos cartas del mismo palo: Carta A + Carta B + 20",
     "envido.calc2": "Palos distintos: solo el valor de la carta más alta",
+    "envido.calc3": "Las cartas 10, 11 y 12 no suman valor (valen 0).",
     "envido.tie": "Empate: gana el jugador mano (quien juega primero en la ronda).",
-    "envido.example": "Ejemplo de cálculo",
-    "envido.example.value": "7 (espadas) + 5 (espadas) + 20 = 32 puntos",
+    "envido.examples": "Ejemplos",
+    "ex.e1.value": "7 + 5 + 20 = 32",
+    "ex.e1.note": "Dos cartas del mismo palo",
+    "ex.e2.value": "7 + 6 + 20 = 33",
+    "ex.e2.note": "Mayor Envido posible",
+    "ex.e3.value": "3 + 0 + 20 = 23",
+    "ex.e3.note": "El 12 no cuenta",
+    "ex.e4.value": "0 puntos",
+    "ex.e4.note": "Sin pareja: 10 y 11 valen cero",
     "flor.badge": "Privilegio raro",
     "flor.title": "La Flor sagrada",
-    "flor.body": "Si recibes las tres cartas del mismo palo, anuncia de inmediato \"¡Flor!\" antes de que comience la ronda. La Flor vale 3 puntos y anula cualquier Envido. Si ambos lados tienen Flor, el equipo de la mejor Flor gana 3 puntos por cada Flor anunciada. Contra Flor solo puede cantarse si ambos lados tienen Flor: si se acepta, 6 puntos al ganador; si se rechaza, 4 puntos para quien la cantó.",
+    "flor.body": "Si recibes las tres cartas del mismo palo, anuncia de inmediato \"¡Flor!\" antes de que comience la ronda. La Flor vale 3 puntos y anula cualquier Envido. Si ambos lados tienen Flor, el equipo de la mejor Flor gana 3 puntos por cada Flor anunciada. En caso de empate en el valor, gana el jugador mano (misma lógica que el Envido). Contra Flor solo puede cantarse si ambos lados tienen Flor: si se acepta, 6 puntos al ganador; si se rechaza, 4 puntos para quien la cantó.",
 
     "scoring.label": "Marcador",
     "scoring.title": "Matriz de puntuación",
@@ -264,12 +280,20 @@ const translations = {
     "envido.calcTitle": "How Envido is Calculated",
     "envido.calc1": "Two cards of same suit: Card A + Card B + 20",
     "envido.calc2": "No matching suits: only the single highest card value",
+    "envido.calc3": "The 10, 11 and 12 cards add no value (count as 0).",
     "envido.tie": "Tie: the hand player wins (whoever plays first in the round).",
-    "envido.example": "Example Hand Calculation",
-    "envido.example.value": "7 (Swords) + 5 (Swords) + 20 = 32 points",
+    "envido.examples": "Examples",
+    "ex.e1.value": "7 + 5 + 20 = 32",
+    "ex.e1.note": "Two cards of the same suit",
+    "ex.e2.value": "7 + 6 + 20 = 33",
+    "ex.e2.note": "Highest possible Envido",
+    "ex.e3.value": "3 + 0 + 20 = 23",
+    "ex.e3.note": "The 12 doesn't count",
+    "ex.e4.value": "0 points",
+    "ex.e4.note": "No pair: 10 and 11 are worth zero",
     "flor.badge": "Rare privilege",
     "flor.title": "The Sacred \"Flor\"",
-    "flor.body": "If you are dealt all three cards of the same suit, immediately call \"Flor!\" before the round begins. The Flor is worth 3 points and overrides any Envido. If both sides have a Flor, the team with the best Flor scores 3 points for each announced Flor. Contra Flor can only be called if both sides have a Flor: if accepted, 6 points to the winner; if rejected, 4 points to the caller.",
+    "flor.body": "If you are dealt all three cards of the same suit, immediately call \"Flor!\" before the round begins. The Flor is worth 3 points and overrides any Envido. If both sides have a Flor, the team with the best Flor scores 3 points for each announced Flor. In case of a tie in value, the hand player wins (same rule as Envido). Contra Flor can only be called if both sides have a Flor: if accepted, 6 points to the winner; if rejected, 4 points to the caller.",
 
     "scoring.label": "Scoring ledger",
     "scoring.title": "Scoring Summary Matrix",
@@ -418,6 +442,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
     mobileMenu.querySelectorAll("a").forEach((a) => {
       a.addEventListener("click", () => setMenu(false));
+    });
+  }
+
+  const audio = document.getElementById("site-music");
+  const musicToggle = document.getElementById("music-toggle");
+
+  function setPlaying(state) {
+    musicToggle.classList.toggle("playing", state);
+    musicToggle.setAttribute("aria-pressed", state ? "true" : "false");
+  }
+
+  if (audio && musicToggle) {
+    audio.volume = 0.6;
+
+    audio.addEventListener("play", () => setPlaying(true));
+    audio.addEventListener("pause", () => setPlaying(false));
+
+    musicToggle.addEventListener("click", () => {
+      if (audio.paused) {
+        audio.play().catch(() => {});
+      } else {
+        audio.pause();
+      }
+    });
+
+    audio.play().catch(() => {
+      const start = () => {
+        if (audio.paused) audio.play().catch(() => {});
+      };
+      document.addEventListener("click", start, { once: true });
+      document.addEventListener("touchstart", start, { once: true });
     });
   }
 
